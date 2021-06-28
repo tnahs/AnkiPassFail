@@ -1,29 +1,22 @@
 /* Default Ease (Good) */
 #defease {
-
-    background-color: hsl(130, 40%, 45%);;
+  background-color: hsl(130, 40%, 45%);
 }
-
 
 /* Again */
 button[data-ease="1"]:not(#defease) {
-
-    background-color: hsl(5, 50%, 50%);
+  background-color: hsl(5, 50%, 50%);
 }
-
 
 /* Hard */
 button[data-ease="2"]:not(#defease) {
-
-    opacity: 0.5;
-    pointer-events: none;
+  opacity: 0.5;
+  pointer-events: none;
 }
-
 
 /* Easy */
 button[data-ease="3"]:not(#defease),
 button[data-ease="4"]:not(#defease) {
-
-    opacity: 0.5;
-    pointer-events: none;
+  opacity: 0.5;
+  pointer-events: none;
 }
