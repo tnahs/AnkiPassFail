@@ -1,3 +1,4 @@
+import os
 from typing import Callable, List, Tuple
 
 import aqt
@@ -61,8 +62,9 @@ class AnkiPassFail:
             # > mw.addonManager.setWebExports(__name__, r"web/.*(css|js)")
             #
             # via https://github.com/ankitects/anki/blob/main/qt/aqt/webview.py
-            aqt.mw.addonManager.setWebExports(__name__, r"assets/.*\.css")
 
-            web_content.css.append(str(Defaults.MAIN_CSS_PATH))
+            aqt.mw.addonManager.setWebExports(__name__, fr"{Key.ASSETS}{os.sep}.*\.css")  # type: ignore
+
+            web_content.css.append(str(Defaults.ASSET_MAIN_CSS))
 
         aqt.gui_hooks.webview_will_set_content.append(hook__append_css)

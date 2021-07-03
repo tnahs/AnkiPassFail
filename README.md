@@ -4,6 +4,10 @@
 
 Download `*.ankiaddon` from `./bundle`
 
+## Usage
+
+TODO
+
 ## Development
 
 ```shell
