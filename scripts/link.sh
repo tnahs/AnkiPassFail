@@ -1,6 +1,5 @@
 #! /bin/zsh
 
-
 # https://unix.stackexchange.com/a/115431
 root=${0:A:h:h}
 

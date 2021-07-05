@@ -3,10 +3,15 @@ import pathlib
 import aqt
 
 
+class ConfigError(Exception):
+    pass
+
+
 class Key:
     ASSETS = "assets"
     MAIN_CSS = "main.css"
     REVIEW = "review"
+    SRC = "src"
 
 
 class Defaults:
@@ -18,14 +23,7 @@ class Defaults:
     # [/absolute/path/to/addon]
     ADDON_ROOT = pathlib.Path(__file__).parent.parent
 
-    # Add-ons may expose their own web assets by utilizing
-    # aqt.addons.AddonManager.setWebExports(). Web exports registered
-    # in this manner may then be accessed under the `/_addons` subpath.
-    #
-    # via https://github.com/ankitects/anki/blob/main/qt/aqt/webview.py
+    # /_addons
     WEB_ROOT = pathlib.Path("/_addons")
-    ASSET_MAIN_CSS = WEB_ROOT / NAME_INTERNAL / Key.ASSETS / Key.MAIN_CSS
-
-
-class ConfigError(Exception):
-    pass
+    # /_addons/[addon-name]/src/assets/main.css
+    MAIN_CSS = WEB_ROOT / NAME_INTERNAL / Key.SRC / Key.ASSETS / Key.MAIN_CSS

@@ -1,6 +1,5 @@
 #! /bin/zsh
 
-
 # https://unix.stackexchange.com/a/115431
 root=${0:A:h:h}
 
@@ -11,9 +10,6 @@ zip  \
     --exclude "**/.*" \
     --include \
         "./src/**.py" \
-        "./assets/**" \
         "./__init__.py" \
         "./user_files/**" \
-        "./config.json" \
-        "./config.md" \
-        "./meta.json"
+        "./manifest.json"

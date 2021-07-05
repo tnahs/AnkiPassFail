@@ -63,8 +63,10 @@ class AnkiPassFail:
             #
             # via https://github.com/ankitects/anki/blob/main/qt/aqt/webview.py
 
-            aqt.mw.addonManager.setWebExports(__name__, fr"{Key.ASSETS}{os.sep}.*\.css")  # type: ignore
+            aqt.mw.addonManager.setWebExports(  # type: ignore
+                __name__, fr"{Key.SRC}{os.sep}{Key.ASSETS}{os.sep}.*\.css"
+            )
 
-            web_content.css.append(str(Defaults.ASSET_MAIN_CSS))
+            web_content.css.append(str(Defaults.MAIN_CSS))
 
         aqt.gui_hooks.webview_will_set_content.append(hook__append_css)

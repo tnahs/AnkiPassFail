@@ -11,5 +11,5 @@ TODO
 ## Development
 
 ```shell
-export ANKI_ADDON_DEV=True
+export ANKI_ADDON_DEVELOPMENT=True
 ```
