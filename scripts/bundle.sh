@@ -10,6 +10,7 @@ zip  \
     --exclude "**/.*" \
     --include \
         "./src/**.py" \
+        "./src/assets/**" \
         "./__init__.py" \
         "./user_files/**" \
         "./manifest.json"

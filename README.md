@@ -2,7 +2,7 @@
 
 ## Installation
 
-Download `*.ankiaddon` from `./bundle`
+Download and run `bundle/anki-pass-fail.ankiaddon`.
 
 ## Usage
 
