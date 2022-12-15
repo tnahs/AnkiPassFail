@@ -1,0 +1,35 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+
+  build:
+    name: Release `.ankiaddon` bundle
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Create `.ankiaddon` bundle
+        run: >
+          cd addon;
+          zip                            \
+            ../AnkiPassFail.ankiaddon * \
+            --recurse-paths              \
+            --exclude "**/.*"            \
+            --include                    \
+              "./__init__.py"            \
+              "./src/**.py"              \
+              "./src/assets/**"          \
+              "./user_files/**"          \
+              "./manifest.json"
+
+      - name: Create draft release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: AnkiPassFail.ankiaddon
+          draft: true
