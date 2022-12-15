@@ -1,7 +1,7 @@
 [project]
 name = "AnkiPassFail"
 description = "Avoid Ease-Hell!"
-version = "0.2.0"
+version = "0.2.1"
 authors = [{ name = "Shant Ergenian", email = "shaaant@pm.me" }]
 
 [tool.isort]
