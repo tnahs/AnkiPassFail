@@ -5,4 +5,4 @@ root=${0:A:h:h}
 
 ln -s \
     "$root/addon" \
-    "$HOME/Library/Application Support/Anki2/addons21/dev-anki-pass-fail"
+    "$HOME/Library/Application Support/Anki2/addons21/AnkiPassFailDev"
