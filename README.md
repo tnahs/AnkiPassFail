@@ -2,11 +2,9 @@
 
 Avoid Ease-Hell!
 
-<!--
 ## Installation
 
 Download and run the latest [`AnkiPassFail.ankiaddon`][releases] release.
--->
 
 ## Usage
 
