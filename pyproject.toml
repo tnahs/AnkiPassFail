@@ -1,6 +1,6 @@
 [project]
 name = "AnkiPassFail"
-description = ""
+description = "Avoid Ease-Hell!"
 version = "0.2.0"
 authors = [{ name = "Shant Ergenian", email = "shaaant@pm.me" }]
 
