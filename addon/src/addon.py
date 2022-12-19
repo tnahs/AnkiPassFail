@@ -11,8 +11,7 @@ from .helpers import Defaults, Key
 
 class AnkiPassFail:
     def setup(self) -> None:
-        """Regsiters the add-on's hooks to append its CSS and disable some reviewer
-        shortcuts."""
+        """Registers hooks which append CSS and disable some reviewer shortcuts."""
 
         if aqt.mw is None:
             return
